@@ -21,8 +21,8 @@ def cone_detection(image_path):
     
     # Define orange-red color ranges in HSV
     # Need two ranges because red wraps around the HSV color wheel
-    red_low1, red_high1 = np.array([0, 135, 135]), np.array([15, 255, 255])
-    red_low2, red_high2 = np.array([159, 135, 135]), np.array([179, 255, 255])
+    red_low1, red_high1 = np.array([0, 100, 100]), np.array([15, 255, 255])
+    red_low2, red_high2 = np.array([160, 100, 100]), np.array([180, 255, 255])
     
     # Create a binary mask where white pixels (255) represent the orange-red colors
     mask = cv2.bitwise_or(
@@ -163,7 +163,7 @@ def cone_detection(image_path):
         # - Points within 40 pixels of the fitted line are considered inliers
         # - Points further than 40 pixels are considered outliers
         # This helps remove false cone detections that don't align with the pattern of the path.
-        model = RANSACRegressor(residual_threshold=40)
+        model = RANSACRegressor(residual_threshold=50)
 
         # Fit the line using RANSAC algorithm
         model.fit(x_coords, y_coords)

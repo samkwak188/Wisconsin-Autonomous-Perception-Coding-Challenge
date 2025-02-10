@@ -19,7 +19,7 @@ This project implements a computer vision algorithm to detect traffic cones and 
 - Detects contours in the binary mask for shape processing
 - Implements comprehensive filtering criteria:
   - Dynamic size thresholds that adapt based on vertical position in image (compensates for perspective)
-  - Height-to-width ratio analysis to identify cone-like shapes
+  - Height to width ratio analysis to identify cone-like shapes
   - Advanced shape properties analysis including:
     - Solidity (area to convex hull area ratio)
     - Circularity (perimeter to area relationship)
@@ -34,9 +34,7 @@ This project implements a computer vision algorithm to detect traffic cones and 
 
 ### 3. Lane Detection
 - Splits detected cones into left and right groups based on image center
-- Applies RANSAC regression to:
-  - Remove outliers and false detections
-  - Fit robust boundary lines
+- Applies RANSAC regression to find pattern and remove false detections
 - Implements polynomial fitting for smooth boundary line visualization
 
 ## Implementation Challenges and Solutions
@@ -62,7 +60,9 @@ This project implements a computer vision algorithm to detect traffic cones and 
 - Integration of temporal tracking could improve stability in video streams
 
 ## References
-- OpenCV Official Documentation
-- scikit-learn RANSAC Documentation
-- Various computer vision research papers and tutorials
-
+(Similar Github project)[https://gist.github.com/razimgit/d9c91edfd1be6420f58a74e1837bde18]
+(OpenCV tutorial)[https://www.youtube.com/watch?v=bPSfyK_DJAg&list=PLzMcBGfZo4-lUA8uGjeXhBUUzPYc6vZRn&index=4]
+(OpenCV tutorial)[https://www.youtube.com/watch?v=ddSo8Nb0mTw&list=PLzMcBGfZo4-lUA8uGjeXhBUUzPYc6vZRn&index=5]
+(Paper)[https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/itr2.12212]
+(OpenCV official documentations)[https://docs.opencv.org/4.x/]
+Numerous Geeks for Geeks and Stack Overflow forums

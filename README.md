@@ -60,9 +60,9 @@ This project implements a computer vision algorithm to detect traffic cones and 
 - Integration of temporal tracking could improve stability in video streams
 
 ## References
-(Similar Github project)[https://gist.github.com/razimgit/d9c91edfd1be6420f58a74e1837bde18]
-(OpenCV tutorial)[https://www.youtube.com/watch?v=bPSfyK_DJAg&list=PLzMcBGfZo4-lUA8uGjeXhBUUzPYc6vZRn&index=4]
-(OpenCV tutorial)[https://www.youtube.com/watch?v=ddSo8Nb0mTw&list=PLzMcBGfZo4-lUA8uGjeXhBUUzPYc6vZRn&index=5]
-(Paper)[https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/itr2.12212]
-(OpenCV official documentations)[https://docs.opencv.org/4.x/]
+[Similar Github project](https://gist.github.com/razimgit/d9c91edfd1be6420f58a74e1837bde18)
+[OpenCV tutorial](https://www.youtube.com/watch?v=bPSfyK_DJAg&list=PLzMcBGfZo4-lUA8uGjeXhBUUzPYc6vZRn&index=4)
+[OpenCV tutorial](https://www.youtube.com/watch?v=ddSo8Nb0mTw&list=PLzMcBGfZo4-lUA8uGjeXhBUUzPYc6vZRn&index=5)
+[Paper](https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/itr2.12212)
+[OpenCV official documentations](https://docs.opencv.org/4.x/)
 Numerous Geeks for Geeks and Stack Overflow forums

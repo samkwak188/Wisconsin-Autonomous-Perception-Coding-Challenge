@@ -42,20 +42,25 @@ This project implements a computer vision algorithm to detect traffic cones and 
 ### Successful Approaches
 1. **HSV Color Space**: Chosen over RGB for its superior color-intensity separation, providing more reliable cone detection across varying lighting conditions
 2. **Dynamic Thresholds**: Implemented adaptive size thresholds based on vertical position, significantly improving detection accuracy for cones at different distances
-3. **RANSAC Implementation**: Successfully eliminated false positives and created stable boundary lines through robust pattern analysis
+3. **RANSAC Implementation**: Successfully eliminated false positives and created stable boundary lines through pattern analysis
 
 ### Unsuccessful Attempts
 1. **Initial Color Range Selection**: Early attempts with broader color ranges captured too many non-cone objects. Solved by implementing precise dual-range thresholding
 2. **Basic Color Thresholding**: Simple brightness-based thresholding proved unreliable due to varying lighting conditions in the image
-3. **Linear Regression**: Initial attempts with DBSCAN clustering and simple linear regression failed to handle the perspective effects properly. Resolved by implementing RANSAC with perspective compensation
+3. **Linear Regression**: Initial attempts with DBSCAN clustering and simple linear regression failed to handle the perspective effects properly. Some cones are further (higher in the image) becaue of the perspective of the image. Resolved by implementing RANSAC to find specific patterns between detected data.
+
+### Conclusion
+1. From all the approaches I tried, using color filtering, shape detection and pattern analysis gave the highest accuracy.
+2. Some cones are still not being detected sometimes, due to the randomness in RANSC model, and also due to inaccuracies in shape detection code.
+3. Instead of using manual number values to detect the shape of cones, using ML model to do the job will be much more easier and more precise.
 
 ## Libraries Used
 - OpenCV (cv2): Primary computer vision operations and image processing
 - NumPy: Efficient numerical operations and array manipulations
-- scikit-learn: RANSAC implementation for robust line fitting
+- scikit-learn: RANSAC implementation for line fitting and pattern analysis
 
 ## Future Improvements
-- Implementation of deep learning approaches like YOLO could potentially improve detection accuracy
+- Implementation of deep learning approaches : Using frameworks like YOLO, SSD, Faster R-CNN could potentially improve detection accuracy
 - Additional perspective correction could enhance distance estimation
 - Integration of temporal tracking could improve stability in video streams
 
